@@ -48,10 +48,7 @@ class CategoryPage extends StatelessWidget {
 }
 
 Route _createRoute(String title) {
-  return PageRouteBuilder(
-    pageBuilder: (context, animation, secondaryAnimation) => ItemPage(title),
-    transitionsBuilder: (context, animation, secondaryAnimation, child) {
-      return child;
-    },
+  return MaterialPageRoute(
+    builder: (_) => ItemPage(title),
   );
 }
